@@ -6,16 +6,16 @@ from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from io import BytesIO
 import pdfplumber
+import toml 
 import os
 
-custom_css = """
-<style>
-body {
-    zoom: 100%;
-}
-</style>
-"""
-st.markdown(custom_css, unsafe_allow_html=True)
+
+# Directory for saving config files
+config_dir = 'config'
+os.makedirs(config_dir, exist_ok=True)
+
+# Path to the configuration file
+config_file_path = os.path.join(config_dir, 'config.toml')
 
 # Set a custom nltk data directory
 nltk_data_path = os.path.expanduser('~/nltk_data')

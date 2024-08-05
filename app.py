@@ -6,6 +6,11 @@ from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from io import BytesIO
 import pdfplumber
+import os
+
+# Set a custom nltk data directory
+nltk_data_path = os.path.expanduser('~/nltk_data')
+nltk.data.path.append(nltk_data_path)
 
 nltk.download('punkt')
 nltk.download('stopwords')

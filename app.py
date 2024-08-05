@@ -12,6 +12,15 @@ import os
 nltk_data_path = os.path.expanduser('~/nltk_data')
 nltk.data.path.append(nltk_data_path)
 
+custom_css = """
+<style>
+body {
+    zoom: 100%;
+}
+</style>
+"""
+st.markdown(custom_css, unsafe_allow_html=True)
+
 nltk.download('punkt')
 nltk.download('stopwords')
 
